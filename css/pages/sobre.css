@@ -1,0 +1,108 @@
+@import url("../global.css");
+@import url("variables.css");
+
+.sobre {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--font-color);
+}
+
+.container__title {
+  background-color: var(--color-secondary);
+  width: 300px;
+  margin: 24px auto;
+  padding: 18px 48px;
+  border-radius: 24px;
+  text-align: center;
+}
+
+.sobre__title {
+  font-size: var(--font-size-large);
+  font-weight: 700;
+}
+
+.sobre__content {
+  background-color: var(--color-tertiary);
+  border-radius: 24px;
+  width: 500px;
+  padding: 24px 48px;
+  margin-bottom: 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  text-align: justify;
+}
+
+.sobre__apresentacao p {
+  line-height: 1.6;
+  margin-bottom: 16px;
+  font-size: var(--font-size-base);
+}
+
+.sobre__apresentacao p:last-child {
+  margin-bottom: 0;
+}
+
+.sobre__diretrizes {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.diretriz__card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.diretriz__card h3 {
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--color-primary);
+}
+
+.diretriz__card p {
+  line-height: 1.5;
+}
+
+.diretriz__card ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.diretriz__card li {
+  line-height: 1.5;
+}
+
+.sobre__comunidade h2 {
+  font-size: var(--font-size-large);
+  font-weight: 600;
+  margin-bottom: 14px;
+  color: var(--color-primary);
+}
+
+.sobre__comunidade p {
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.sobre__slogan {
+  text-align: center;
+  margin-top: 24px;
+  font-style: italic;
+}
+
+.sobre__slogan strong {
+  font-size: var(--font-size-base);
+  color: var(--color-primary);
+  border-top: 1px dashed rgba(255, 255, 255, 0.2);
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.2);
+  padding: 12px 0;
+  display: block;
+}
