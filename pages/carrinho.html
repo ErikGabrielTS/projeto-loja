@@ -66,27 +66,60 @@
         <h2 class="carrinho__title">Seu Carrinho de Compras</h2>
       </div>
 
-      <section class="produtos">
-        <div class="product__card">
-          <div class="container__image">
-            <img
-              src="/images/3DS.png"
-              alt="Nintendo 3DS"
-              class="product__image"
-            />
-          </div>
+      <div class="container__content">
+        <section class="produtos">
+          <div class="product__card">
+            <div class="container__image">
+              <img
+                src="/images/3DS.png"
+                alt="Nintendo 3DS"
+                class="product__image"
+              />
+            </div>
 
-          <div class="product__info">
-            <h4>Nintendo 3DS</h4>
-            <span>R$ 1.299,99</span>
-            <input type="number" value="1" min="1" />
-            <span> Total: R$ 1.299,99</span>
-          </div>
+            <div class="product__info">
+              <h4>Nintendo 3DS</h4>
+              <span>R$ 1.299,99</span>
+              <input type="number" value="1" min="1" />
+              <span> Total: R$ 1.299,99</span>
+            </div>
 
-          <button>X</button>
-        </div>
-      </section>
-      <section class="resumo"></section>
+            <button>X</button>
+          </div>
+        </section>
+        <section class="resumo">
+          <form>
+            <div class="cep__card">
+              <h3>CEP</h3>
+
+              <input type="text" placeholder="Digite seu CEP" />
+            </div>
+
+            <div class="resumo__card">
+              <div class="resumo__info">
+                <h3>Valor Total</h3>
+                <span>R$ 1.299,99</span>
+              </div>
+
+              <div class="resumo__info">
+                <h3>Valor Frete</h3>
+                <span>R$ 5,00</span>
+              </div>
+
+              <div class="resumo__info">
+                <h3>Total a Pagar</h3>
+                <span>R$ 1.304,99</span>
+              </div>
+
+              <div class="actions">
+                <a href="/index.html">Continuar Comprando</a>
+
+                <button type="submit">Finalizar Compra</button>
+              </div>
+            </div>
+          </form>
+        </section>
+      </div>
     </main>
 
     <footer class="footer">

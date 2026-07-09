@@ -1,10 +1,14 @@
 @import url("../global.css");
 @import url("../variables.css");
 
+main {
+  margin: 24px auto;
+}
+
 .container__title {
   background-color: var(--color-secondary);
   width: 300px;
-  margin: 24px auto;
+  margin: 0 auto 24px auto;
   padding: 18px 48px;
   border-radius: 24px;
   text-align: center;
@@ -119,4 +123,79 @@
 .product__card button:hover {
   background-color: #ffe5e5;
   color: #e53e3e;
+}
+
+.container__content {
+  display: flex;
+  gap: 24px;
+}
+
+.resumo {
+  border: 2px solid var(--color-primary);
+  border-radius: 8px;
+  padding: 20px;
+  width: 250px;
+}
+
+.cep__card,
+.resumo__info {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+  border: 1px solid var(--color-primary);
+  padding: 12px;
+  border-radius: 4px;
+}
+
+.cep__card h3,
+.resumo__info h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  background-color: var(--color-primary);
+  color: var(--font-color);
+  padding: 8px 0;
+  border-radius: 4px;
+  text-align: center;
+}
+
+.resumo__info span {
+  color: var(--color-tertiary);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-align: center;
+}
+
+.cep__card input {
+  border: 2px solid var(--color-primary);
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+
+.resumo__card a {
+  text-decoration: none;
+  background-color: var(--color-primary);
+  padding: 12px 16px;
+  color: var(--font-color);
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.resumo__card button {
+  border: none;
+  background-color: var(--color-tertiary);
+  color: var(--font-color);
+  font-weight: 700;
+  border-radius: 4px;
+  padding: 12px 16px;
+}
+
+.actions {
+  width: 80%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  margin: 0 auto;
 }
