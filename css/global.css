@@ -106,6 +106,10 @@ main {
 
 .card__product img {
   width: 80%;
+  max-height: 180px;
+
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 .card__content h4 {

@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>OldGen Store</title>
+    <title>Sobre Nós - OldGen Store</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css"
@@ -16,13 +16,12 @@
       href="/images/icons/logo.png"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="css/global.css" />
-    <script type="module" src="/js/lista_produtos.js" defer></script>
+    <link rel="stylesheet" href="/css/pages/carrinho.css" />
   </head>
   <body>
     <header id="header">
       <div id="container__logo">
-        <a href="index.html">
+        <a href="/index.html">
           <img src="/images/icons/logo.png" alt="OldGen Store" class="logo" />
         </a>
       </div>
@@ -30,13 +29,13 @@
       <nav id="menu">
         <ul>
           <li>
-            <a href="index.html" class="item__menu">Home</a>
+            <a href="/index.html" class="item__menu">Home</a>
           </li>
           <li>
-            <a href="pages/cadastro.html" class="item__menu">Cadastro</a>
+            <a href="/pages/cadastro.html" class="item__menu">Cadastro</a>
           </li>
           <li>
-            <a href="pages/sobre.html" class="item__menu">Sobre</a>
+            <a href="/pages/sobre.html" class="item__menu">Sobre</a>
           </li>
         </ul>
       </nav>
@@ -63,21 +62,31 @@
     </header>
 
     <main>
-      <section class="search">
-        <input type="text" name="pesquisa" placeholder="Busque o seu produto" />
-      </section>
+      <div class="container__title">
+        <h2 class="carrinho__title">Seu Carrinho de Compras</h2>
+      </div>
 
-      <section class="wrapper__products">
-        <!-- <div class="card__product">
-          <img src="/images/3DS.png" alt="Nintendo 3DS" />
+      <section class="produtos">
+        <div class="product__card">
+          <div class="container__image">
+            <img
+              src="/images/3DS.png"
+              alt="Nintendo 3DS"
+              class="product__image"
+            />
+          </div>
 
-          <div class="card__content">
+          <div class="product__info">
             <h4>Nintendo 3DS</h4>
             <span>R$ 1.299,99</span>
-            <button class="btn__card">Adicionar ao Carrinho</button>
+            <input type="number" value="1" min="1" />
+            <span> Total: R$ 1.299,99</span>
           </div>
-        </div> -->
+
+          <button>X</button>
+        </div>
       </section>
+      <section class="resumo"></section>
     </main>
 
     <footer class="footer">
@@ -103,7 +112,7 @@
           <li>
             <a href="https://www.facebook.com" target="_blank">
               <img
-                src="images/icons/facebook.png"
+                src="/images/icons/facebook.png"
                 alt="Facebook"
                 class="social__icon"
               />
@@ -112,7 +121,7 @@
           <li>
             <a href="https://www.twitter.com" target="_blank">
               <img
-                src="images/icons/x.png"
+                src="/images/icons/x.png"
                 alt="Twitter"
                 class="social__icon"
               />
@@ -121,7 +130,7 @@
           <li>
             <a href="https://www.instagram.com" target="_blank">
               <img
-                src="images/icons/instagram.png"
+                src="/images/icons/instagram.png"
                 alt="Instagram"
                 class="social__icon"
               />
