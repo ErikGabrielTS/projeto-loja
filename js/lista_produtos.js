@@ -2,11 +2,19 @@ import { produtos } from "./produtos.js";
 
 const productsSection = document.querySelector(".wrapper__products");
 const categoriesList = document.querySelector(".categories");
+const searchBtn = document.querySelector("#search");
+
+searchBtn.addEventListener("input", (event) => {
+  const searchText = event.target.value;
+  const produtosFiltrados = filtrarPorPesquisa(searchText);
+
+  listarProdutos(produtosFiltrados);
+});
 
 const buscarCategorias = () => {
   const categoriasMap = new Map();
 
-  produtos.map((produto) => {
+  produtos.forEach((produto) => {
     categoriasMap.set(produto.id_secao, produto.nome_secao);
   });
 
@@ -31,7 +39,7 @@ const listarCategorias = () => {
   });
 };
 
-function filtrarProdutosPorCategoria(idCategoria) {
+const filtrarProdutosPorCategoria = (idCategoria) => {
   if (idCategoria === null) {
     listarProdutos(produtos);
     return;
@@ -42,7 +50,15 @@ function filtrarProdutosPorCategoria(idCategoria) {
   });
 
   listarProdutos(produtosFiltrados);
-}
+};
+
+const filtrarPorPesquisa = (searchText) => {
+  return produtos.filter((produto) => {
+    return produto.descricao_produto
+      .toLowerCase()
+      .includes(searchText.toLowerCase());
+  });
+};
 
 const listarProdutos = (produtos) => {
   productsSection.innerHTML = "";
