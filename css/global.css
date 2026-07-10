@@ -27,6 +27,11 @@ main {
   align-items: center;
 }
 
+.main {
+  gap: 24px;
+  margin: 32px 0;
+}
+
 #header {
   display: flex;
   padding: 16px 48px;
@@ -70,10 +75,6 @@ main {
   gap: 12px;
 }
 
-.search {
-  margin: 32px 0;
-}
-
 .search input {
   width: 400px;
   height: 40px;
@@ -87,7 +88,6 @@ main {
   gap: 16px;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: 32px;
   width: 80%;
 }
 
@@ -190,4 +190,22 @@ main {
 .container__links ul li a {
   text-decoration: none;
   color: black;
+}
+
+.categories li button {
+  list-style: none;
+  background-color: var(--color-tertiary);
+  padding: 12px 24px;
+  color: var(--font-color);
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
 }

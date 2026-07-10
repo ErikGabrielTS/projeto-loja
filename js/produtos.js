@@ -129,11 +129,3 @@ export const produtos = [
     nome_secao: "Gerações Posteriores",
   },
 ];
-
-// Seções disponíveis
-const secoes = [
-  { id_secao: 1, nome_secao: "Consoles Antigos" },
-  { id_secao: 2, nome_secao: "Era Nintendo" },
-  { id_secao: 3, nome_secao: "Era PlayStation" },
-  { id_secao: 4, nome_secao: "Gerações Posteriores" },
-];

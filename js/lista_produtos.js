@@ -1,8 +1,52 @@
 import { produtos } from "./produtos.js";
 
-const ProductsSection = document.querySelector(".wrapper__products");
+const productsSection = document.querySelector(".wrapper__products");
+const categoriesList = document.querySelector(".categories");
 
-const listarProdutos = () => {
+const buscarCategorias = () => {
+  const categoriasMap = new Map();
+
+  produtos.map((produto) => {
+    categoriasMap.set(produto.id_secao, produto.nome_secao);
+  });
+
+  return Array.from(categoriasMap);
+};
+
+const listarCategorias = () => {
+  const categorias = [[null, "Tudo"], ...buscarCategorias()];
+
+  categorias.forEach((categoria) => {
+    const categoriaLi = document.createElement("li");
+    const categoriaBtn = document.createElement("button");
+
+    categoriaBtn.textContent = categoria[1];
+
+    categoriaBtn.addEventListener("click", () => {
+      filtrarProdutosPorCategoria(categoria[0]);
+    });
+
+    categoriaLi.appendChild(categoriaBtn);
+    categoriesList.appendChild(categoriaLi);
+  });
+};
+
+function filtrarProdutosPorCategoria(idCategoria) {
+  if (idCategoria === null) {
+    listarProdutos(produtos);
+    return;
+  }
+
+  const produtosFiltrados = produtos.filter((produto) => {
+    return produto.id_secao == idCategoria;
+  });
+
+  listarProdutos(produtosFiltrados);
+}
+
+const listarProdutos = (produtos) => {
+  productsSection.innerHTML = "";
+
   produtos.forEach((produto) => {
     const productCard = document.createElement("div");
     productCard.classList.add("card__product");
@@ -31,7 +75,7 @@ const listarProdutos = () => {
 
     productCard.appendChild(productImage);
     productCard.appendChild(productInfo);
-    ProductsSection.appendChild(productCard);
+    productsSection.appendChild(productCard);
   });
 };
 
@@ -39,4 +83,5 @@ const adicionarProdutoAoCarrinho = (produto) => {
   console.log(`Produto adicionado ao carrinho: ${produto.descricao_produto}`);
 };
 
-listarProdutos();
+listarProdutos(produtos);
+listarCategorias();
