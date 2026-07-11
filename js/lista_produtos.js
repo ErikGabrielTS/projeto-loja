@@ -96,7 +96,21 @@ const listarProdutos = (produtos) => {
 };
 
 const adicionarProdutoAoCarrinho = (produto) => {
-  console.log(`Produto adicionado ao carrinho: ${produto.descricao_produto}`);
+  const carrinhoAtual = JSON.parse(localStorage.getItem("carrinho")) || [];
+
+  const produtoExistente = carrinhoAtual.find(
+    (item) => item.id_produto === produto.id_produto,
+  );
+
+  if (produtoExistente) {
+    produtoExistente.quantidade += 1;
+  } else {
+    carrinhoAtual.push({ id_produto: produto.id_produto, quantidade: 1 });
+  }
+
+  localStorage.setItem("carrinho", JSON.stringify(carrinhoAtual));
+
+  alert("Quantidade atualizada no localStorage!");
 };
 
 listarProdutos(produtos);
