@@ -110,7 +110,7 @@ const adicionarProdutoAoCarrinho = (produto) => {
 
   localStorage.setItem("carrinho", JSON.stringify(carrinhoAtual));
 
-  alert("Quantidade atualizada no localStorage!");
+  alert("Quantidade atualizada no carrinho!");
 };
 
 listarProdutos(produtos);
