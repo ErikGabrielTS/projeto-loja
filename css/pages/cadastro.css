@@ -1,0 +1,162 @@
+@import url("../global.css");
+@import url("../variables.css");
+
+.container__cadastro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 0 24px;
+}
+
+.container__title {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.cadastro__title {
+  font-family: var(--font-family);
+  font-size: 28px;
+  font-weight: 900;
+  color: var(--color-tertiary);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+}
+
+.cadastro__subtitle {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+.cadastro__form-section {
+  width: 100%;
+  background-color: var(--color-primary);
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cadastro__form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form__group label {
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-tertiary);
+  text-transform: uppercase;
+}
+
+.form__group input[type="text"],
+.form__group input[type="email"],
+.form__group input[type="tel"],
+.form__group input[type="date"],
+.form__group input[type="password"] {
+  width: 100%;
+  height: 48px;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: var(--color-background);
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-tertiary);
+  outline: none;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form__group input:focus {
+  border-color: var(--color-secondary);
+}
+
+.form__group input[type="date"] {
+  color-scheme: light;
+}
+
+.form__group--checkbox {
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  cursor: pointer;
+  margin-top: 8px;
+}
+
+.form__group--checkbox input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--color-tertiary);
+  cursor: pointer;
+}
+
+.form__group--checkbox label {
+  font-size: 14px;
+  text-transform: none;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--color-tertiary);
+}
+
+.cadastro__actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.btn__cadastrar {
+  width: 100%;
+  height: 48px;
+  background-color: var(--color-tertiary);
+  color: var(--font-color);
+  font-size: var(--font-size-large);
+  font-weight: 700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.btn__cadastrar:hover {
+  background-color: var(--color-secondary);
+  transform: translateY(-2px);
+}
+
+.btn__cadastrar:active {
+  transform: translateY(0);
+}
+
+.cadastro__login-link {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-tertiary);
+  font-weight: 500;
+}
+
+.cadastro__login-link a {
+  color: var(--color-secondary);
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.cadastro__login-link a:hover {
+  color: var(--color-background);
+  text-decoration: underline;
+}
