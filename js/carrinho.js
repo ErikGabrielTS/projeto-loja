@@ -4,7 +4,17 @@ const produtosSection = document.querySelector("#produtos");
 const valorTotalSpan = document.querySelector("#valor-total");
 const valorFreteSpan = document.querySelector("#valor-frete");
 const valorAPagarSpan = document.querySelector("#valor-a-pagar");
+const form = document.querySelector("#form");
 const valorFrete = 10;
+
+form.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+
+  localStorage.removeItem("carrinho");
+  listarItensCarrinho([]);
+  atualizarResumoCarrinho();
+  alert("Seu pedido foi efetuado com sucesso!");
+});
 
 const listarItensCarrinho = (itensCarrinho) => {
   produtosSection.innerHTML = "";
@@ -65,7 +75,7 @@ const buscarProdutoById = (idProduto) => {
 };
 
 const buscarProdutosCarrinho = () => {
-  return JSON.parse(localStorage.getItem("carrinho"));
+  return JSON.parse(localStorage.getItem("carrinho")) || [];
 };
 
 const atualizarProdutoDoCarrinho = (idProduto, novaQtd) => {
